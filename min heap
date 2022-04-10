@@ -1,0 +1,78 @@
+class MinHeap:
+    def __init__(self,capacity):
+        self.storage = [0] * capacity
+        self.capacity = capacity
+        self.size = 0
+    def getParent(self, index):
+        return  (index-1)//2 
+    def getLeftChild(self,index):
+        return ((2 * index) + 1)
+    def getRightChild(self,index):
+        return ((2 * index) + 2)
+    def hasParent(self,index):
+        return self.getParent(index) >= 0
+    def hasLeftChild(self,index):
+        return self.getLeftChild(index) < self.size
+    def hasRightChild(self,index):
+        return self.getRightChild(index) < self.size
+    def parentData(self,index):
+        return self.storage[self.getParent(index)]
+    def leftChildData(self,index):
+        return self.storage[self.getLeftChild(index)]
+    def rightChildData(self,index):
+        return self.storage[self.getRightChild(index)]
+    def isFull(self):
+        return self.size == self.capacity
+    def swap(self,index1,index2):
+        alt = self.storage[index1]
+        self.storage[index1] = self.storage[index2]
+        self.storage[index2] = alt
+    def insert(self,data):
+        if(self.isFull()):
+            raise Exception("Heap is Full")
+        self.storage[self.size] = data
+        self.size += 1
+        self.heapifyUp()
+    def heapifyUp(self):
+        index = self.size - 1
+        while(self.hasParent(index) and self.parentData(index) > self.storage[index]):
+            self.swap(self.getParent(index),index)
+            index = self.getParent(index)
+    def heapifyDown(self):
+        index = 0
+        while(self.hasLeftChild(index)):
+            smallindex = self.getLeftChild(index)
+            if self.hasRightChild(index) and self.rightChildData(index) < self.rightChildData(index):
+                smallindex = self.getRightChild(index)
+            if self.storage[index] < self.storage[smallindex]:
+                break
+            else:
+                self.swap(index, smallindex)
+            index = smallindex
+    def removeMin(self):
+        if self.size == 0:
+            raise Exception("Heap is Empty")
+        data = self.storage[0]
+        self.storage[0] = self.storage[self.size - 1]
+        self.size -= 1
+        self.heapifyDown(self)
+        return data
+    def getMin(self):
+        if self.size == 0:
+            raise Exception("Heap is Empty")
+            return
+        return self.storage[0]
+
+        
+    def printHeap(self):
+        print(self.storage)
+if __name__ == "__main__":
+    mh = MinHeap(12)
+    mh.removeMin()
+    mh.removeMin()
+    print(mh.isFull())
+
+    
+
+
+
