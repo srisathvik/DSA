@@ -1,0 +1,101 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "OddOrEven",
+            "request": "launch",
+            "mainClass": "bitManipulation.OddOrEven",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "reccursion.BinarySearch",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Pattern1",
+            "request": "launch",
+            "mainClass": "pattern.Pattern1",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "sorting.bubbleSort.BubbleSort",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Binary_search_2d_array",
+            "request": "launch",
+            "mainClass": "Binary_search_2d_array",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "SearchInInfiniteArray",
+            "request": "launch",
+            "mainClass": "SearchInInfiniteArray",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Pyramid",
+            "request": "launch",
+            "mainClass": "pattern.Pyramid",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "FloorOfNumber",
+            "request": "launch",
+            "mainClass": "FloorOfNumber",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "CeilingOfNumber",
+            "request": "launch",
+            "mainClass": "CeilingOfNumber",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "BinarySearch",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Hello",
+            "request": "launch",
+            "mainClass": "Hello.Hello",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\pair_with_given_sum.js"
+        }
+    ]
+}
