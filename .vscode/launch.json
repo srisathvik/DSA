@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Find_ith_bit",
+            "request": "launch",
+            "mainClass": "bitManipulation.Find_ith_bit",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Non_repeated_number",
+            "request": "launch",
+            "mainClass": "bitManipulation.Non_repeated_number",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "OddOrEven",
             "request": "launch",
             "mainClass": "bitManipulation.OddOrEven",
