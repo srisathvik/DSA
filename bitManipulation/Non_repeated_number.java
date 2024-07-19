@@ -2,7 +2,7 @@ package bitManipulation;
 
 // import java.util.*;
 import java.lang.Math;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 // returns the integer value which doesnt repeated n times.
 public class Non_repeated_number {

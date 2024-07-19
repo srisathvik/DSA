@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Set_bits",
+            "request": "launch",
+            "mainClass": "bitManipulation.Set_bits",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Power",
+            "request": "launch",
+            "mainClass": "bitManipulation.Power",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Is_pow_of_two",
+            "request": "launch",
+            "mainClass": "bitManipulation.Is_pow_of_two",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Nth_magic_number",
+            "request": "launch",
+            "mainClass": "bitManipulation.Nth_magic_number",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Find_ith_bit",
             "request": "launch",
             "mainClass": "bitManipulation.Find_ith_bit",
