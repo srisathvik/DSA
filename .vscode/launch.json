@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Prime_sieve",
+            "request": "launch",
+            "mainClass": "maths.Prime_sieve",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Prime",
+            "request": "launch",
+            "mainClass": "maths.Prime",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Set_bits",
             "request": "launch",
             "mainClass": "bitManipulation.Set_bits",
