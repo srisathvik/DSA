@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Decimal_sqrt",
+            "request": "launch",
+            "mainClass": "maths.Decimal_sqrt",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Prime_sieve",
             "request": "launch",
             "mainClass": "maths.Prime_sieve",
