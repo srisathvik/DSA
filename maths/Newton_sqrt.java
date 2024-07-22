@@ -1,3 +1,5 @@
+package maths;
+
 public class Newton_sqrt {
     public static void main(String[] args) {
         System.out.println(sqrt(40));
