@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Count_zeroes",
+            "request": "launch",
+            "mainClass": "recursion.Count_zeroes",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Reverse_number",
+            "request": "launch",
+            "mainClass": "recursion.Reverse_number",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Sum_of_digits",
+            "request": "launch",
+            "mainClass": "recursion.Sum_of_digits",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "recursion.Factorial",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Print_nums",
+            "request": "launch",
+            "mainClass": "recursion.Print_nums",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "N_to_One",
+            "request": "launch",
+            "mainClass": "recursion.N_to_One",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "GCD_LCM",
             "request": "launch",
             "mainClass": "maths.GCD_LCM",
