@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Find_all_occurences_in_array",
+            "request": "launch",
+            "mainClass": "recursion.Find_all_occurences_in_array",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Linear_search",
+            "request": "launch",
+            "mainClass": "recursion.Linear_search",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Is_array_sorted",
+            "request": "launch",
+            "mainClass": "recursion.Is_array_sorted",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Count_zeroes",
             "request": "launch",
             "mainClass": "recursion.Count_zeroes",
