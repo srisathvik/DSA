@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "recursion.SelectionSort",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "recursion.BubbleSort",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Pattern",
+            "request": "launch",
+            "mainClass": "recursion.Pattern",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Find_all_occurences_in_array",
             "request": "launch",
             "mainClass": "recursion.Find_all_occurences_in_array",
