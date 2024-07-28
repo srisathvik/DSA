@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Quick_sort",
+            "request": "launch",
+            "mainClass": "quickSort.Quick_sort",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "SelectionSort",
             "request": "launch",
             "mainClass": "recursion.SelectionSort",
