@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Remove_char",
+            "request": "launch",
+            "mainClass": "recursion.Remove_char",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Quick_sort",
             "request": "launch",
             "mainClass": "quickSort.Quick_sort",
