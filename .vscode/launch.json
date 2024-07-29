@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Subset",
+            "request": "launch",
+            "mainClass": "strings.Subset",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Subsequence",
+            "request": "launch",
+            "mainClass": "recursion.Subsequence",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Remove_char",
             "request": "launch",
             "mainClass": "recursion.Remove_char",
