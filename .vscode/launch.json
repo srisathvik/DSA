@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Maze",
+            "request": "launch",
+            "mainClass": "backTracking.Maze",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Permutations",
             "request": "launch",
             "mainClass": "strings.Permutations",
