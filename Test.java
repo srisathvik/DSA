@@ -1,31 +1,56 @@
+import java.util.*;
+
 public class Test {
     public static void main(String[] args) {
-        // String a = "hello";
-        // String b = "hello";
-        // System.out.println(a == b);
-        // System.out.println(a.equals(b));
-        // a = "hi";
-        // b = "hi";
-        // System.out.println(a == b);
-        // System.out.println(a.equals(b));
-        // String greet = new String("hello");
-        // String greet1 = new String("hello");
-        // System.out.println(greet == greet1);
-        // System.out.println(greet.equals(greet1));
-        // System.out.println(33 + 22);
-        // System.out.println('a' + 2);
-        // System.out.println("a" + 2);
-        // // StringBuilder ans = new StringBuilder();
 
-        recursionFunction(5);
+        int[] arr = { 2, 4, 4, 4, 10, 9, 9 };
+        int n = 7;
+        int k = 3;
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(Arrays.stream(arr).);
+        }
+        ArrayList<int[]> list = new ArrayList<int[]>();
+        System.out.println("count: " + findCount(n, arr, k, list));
 
     }
 
-    static void recursionFunction(int num) {
-        if (num > 0) {
-            recursionFunction(num - 1);
-            System.out.println(num);
+    static int findCount(int n, int arr[], int k, ArrayList<int[]> list) {
+        int remWithNum = 0;
+        int remWithOutNum = 0;
+
+        list.add(arr);
+        if (arr.length == 0) {
+            return 0;
         }
-        return;
+        int isIncluded = 0;
+        int diff = Math.abs(Arrays.stream(arr).max().getAsInt() - arr[0] - arr[arr.length - 1]);
+        // System.out.println("diff: " + diff);
+        // System.out.println("left: ");
+        // System.out.println("right: ");
+        // System.out.println(Arrays.toString(arr));
+        if (diff % k == 0) {
+            isIncluded = 1;
+            System.out.println(Arrays.toString(arr));
+        }
+
+        int[] leftSubArray = Arrays.copyOfRange(arr, 0, arr.length - 1);
+        // list.forEach(value -> {
+        // if(Arrays.equals(leftSubArray, value)){
+        // left = true;
+        // };
+        // });
+        // Arrays.stream(arr).filter(i -> Arrays.equals(leftSubArray, i)).count();
+        if (!(list.stream().anyMatch(item -> Arrays.equals(item, leftSubArray)))) {
+            // list.forEach(value -> System.out.print(Arrays.toString(value)));
+            // System.out.println(list.contains(leftSubArray) == false);
+            remWithNum = findCount(n, leftSubArray, k, list);
+        }
+
+        int[] rightSubArary = Arrays.copyOfRange(arr, 1, arr.length);
+        if (!(list.stream().anyMatch(item -> Arrays.equals(item, rightSubArary)))) {
+            // System.out.println(list.contains(rightSubArary) == false);
+            remWithOutNum = findCount(n, rightSubArary, k, list);
+        }
+        return isIncluded + remWithNum + remWithOutNum;
     }
 }
