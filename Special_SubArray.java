@@ -7,8 +7,11 @@ public class Special_SubArray {
 
     }
 
-    static int getCount(int[] arr, int n, int k){
-        if()
+    static int getCount(int[] arr, int n, int k) {
+        if (arr.length == 0) {
+            return 0;
+        }
+
         return 0;
     }
 }

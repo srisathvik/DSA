@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Maze",
+            "request": "launch",
+            "mainClass": "Maze",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Special_SubArray",
+            "request": "launch",
+            "mainClass": "jobAThonAug2024.Special_SubArray",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
+            "name": "Special_SubArray",
+            "request": "launch",
+            "mainClass": "Special_SubArray",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "AllPaths",
             "request": "launch",
             "mainClass": "AllPaths",
