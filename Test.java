@@ -2,15 +2,15 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-
-        int[] arr = { 2, 4, 4, 4, 10, 9, 9 };
-        int n = 7;
-        int k = 3;
-        for(int i = 0; i < arr.length; i++){
-            System.out.print(Arrays.stream(arr).);
-        }
-        ArrayList<int[]> list = new ArrayList<int[]>();
-        System.out.println("count: " + findCount(n, arr, k, list));
+        System.out.println(31 & ((1 << 4) - 1));
+        // int[] arr = { 2, 4, 4, 4, 10, 9, 9 };
+        // int n = 7;
+        // int k = 3;
+        // for(int i = 0; i < arr.length; i++){
+        // System.out.print(Arrays.stream(arr).);
+        // }
+        // ArrayList<int[]> list = new ArrayList<int[]>();
+        // System.out.println("count: " + findCount(n, arr, k, list));
 
     }
 
