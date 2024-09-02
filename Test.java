@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println(31 & ((1 << 4) - 1));
+        // System.out.println(31 & ((1 << 4) - 1));
         // int[] arr = { 2, 4, 4, 4, 10, 9, 9 };
         // int n = 7;
         // int k = 3;
@@ -11,6 +11,13 @@ public class Test {
         // }
         // ArrayList<int[]> list = new ArrayList<int[]>();
         // System.out.println("count: " + findCount(n, arr, k, list));
+        int[] arr = { 1, 2, 3, 4, 5 };
+        arr.String s = Arrays.toString(arr)
+                .replace(",", "") // remove the commas
+                .replace("[", "") // remove the right bracket
+                .replace("]", ""); // remove the left bracket
+
+        System.out.println(s.trim());
 
     }
 

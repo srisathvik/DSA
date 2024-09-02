@@ -1,7 +1,7 @@
 package Inheritance;
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Box box = new Box();
         BoxWeight box2 = new BoxWeight();
         System.out.println(box2.l + " " + box2.b + " " + box2.h + " " + box2.weight);

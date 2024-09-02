@@ -1,6 +1,7 @@
 package strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Subset {
@@ -8,7 +9,7 @@ public class Subset {
         int[] arr = { 1, 2, 3, 4, 5 };
         List<List<Integer>> ans = subset(arr);
         for (List<Integer> list : ans) {
-            System.out.println(list);
+            System.out.println(list.stream().mapToInt(Integer::intValue).sum());
         }
     }
 
