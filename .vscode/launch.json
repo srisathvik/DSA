@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ValidSubArray",
+            "request": "launch",
+            "mainClass": "practiceDump.ValidSubArray",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Inheritance.Main",
