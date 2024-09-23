@@ -6,13 +6,15 @@ import java.util.List;
 
 public class ValidSubArray {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3 };
-        int sum = arraySum(arr);
-        if (sum % 3 != 0) {
-            System.out.println("false");
-        } else {
-            System.out.println(allSubArrays(new ArrayList<Integer>(), arr, 0, arr.length - 1, sum));
-        }
+        int[] arr = { 1, 3, 2, 4, 2 };
+        System.out.println(isValid(5, arr));
+        // int sum = arraySum(arr);
+        // if (sum % 3 != 0) {
+        // System.out.println("false");
+        // } else {
+        // System.out.println(allSubArrays(new ArrayList<Integer>(), arr, 0, arr.length
+        // - 1, sum));
+        // }
         // allSubArrays(new ArrayList<Integer>(), arr, 0, arr.length - 1);
 
     }
@@ -53,5 +55,32 @@ public class ValidSubArray {
         copy.add(originalArray[start]);
         ans = ans || allSubArrays(copy, originalArray, start + 1, end, sum);
         return ans;
+    }
+
+    static int isValid(int n, int[] arr) {
+
+        int sum = 0;
+        for (int x : arr) {
+            sum += x;
+        }
+
+        if (sum % 3 != 0) {
+            return 0;
+        }
+
+        int target = sum / 3;
+
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true;
+
+        for (int num : arr) {
+            for (int j = target; j >= num; j--) {
+                if (dp[j - num]) {
+                    dp[j] = true;
+                }
+            }
+        }
+
+        return dp[target] ? 1 : 0;
     }
 }
