@@ -20,27 +20,37 @@ public class Test {
         // System.out.println(s.trim());
         int[] arr1 = { 7, 7 };
         int[] arr2 = { 1, 5, 9, 23, 12 };
-        System.out.println(maxSum(5, 3, arr2));
+        maxSum();
 
     }
 
-    static long maxSum(int n, int x, int[] arr) {
+    static void maxSum() {
         // code here
-        Arrays.sort(arr);
-        String a;
-        a = "" + 1 + 1;
-        System.out.println(a);
-        System.out.println(Arrays.toString(arr));
-        for (int i = n - 1; i > 0; i--) {
-            for (int j = i - 1; j >= 0; j--) {
-                if (((arr[i] >> (x - 1)) & 1) != ((arr[j] >> (x - 1)) & 1)) {
-                    System.out.println(arr[i] + " " + arr[j]);
-                    return arr[i] + arr[j];
+        Scanner data = new Scanner(System.in);
+        int t = data.nextInt();
+        for (int i = 0; i < t; i++) {
+            int len = data.nextInt();
+            int[] arr = new int[len];
+            for (int j = 0; j < len; j++) {
+                arr[j] = data.nextInt();
+            }
+            int[] sorted = arr.clone();
+            Arrays.sort(sorted);
+            int max = 0;
+            int nextMax = 0;
+            for (int j = 0; i < len; j++) {
+                if (arr[j] != sorted[j]) {
+                    if (arr[j] > max) {
+                        nextMax = max;
+                        max = arr[j];
+                    } else if (arr[j] > nextMax) {
+                        nextMax = arr[j];
+                    }
                 }
             }
-
+            System.out.println(max + nextMax);
         }
-        return -1;
+        data.close();
 
     }
     // static int crazyIntegers(int n) {
