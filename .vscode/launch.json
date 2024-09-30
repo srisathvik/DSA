@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "linkedList.Main",
+            "projectName": "DSA_4f5eb4d6"
+        },
+        {
+            "type": "java",
             "name": "ValidSubArray",
             "request": "launch",
             "mainClass": "practiceDump.ValidSubArray",
