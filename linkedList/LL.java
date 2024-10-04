@@ -68,34 +68,36 @@ public class LL {
         return value;
     }
 
-    public void deleteLast() {
+    public int deleteLast() {
         Node temp = head;
         while (temp.next.next != null) {
             temp = temp.next;
         }
         temp.next = null;
+        int value = tail.value;
         tail = temp;
         size--;
+        return value;
     }
 
-    public void deleteAtIndex(int index) {
+    public int deleteAtIndex(int index) {
         if (index > size) {
             System.out.println("Index out of range");
         }
         if (index == 0) {
-            deleteFirst();
-            return;
-        } else if (index == size) {
-            deleteLast();
-            return;
+            return deleteFirst();
+        } else if (index == size - 1) {
+            return deleteLast();
+
         }
         Node temp = head;
         for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
+        int value = temp.next.value;
         temp.next = temp.next.next;
         size--;
-
+        return value;
     }
 
     public void print() {
@@ -123,7 +125,4 @@ public class LL {
         }
     }
 
-    public static void main(String[] args) {
-
-    }
 }

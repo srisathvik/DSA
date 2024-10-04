@@ -63,7 +63,7 @@ public class CustomArrayList<T> {
         list.add(3);
         list.add(3);
         list.add(3);
-        list.get();
+        // list.get();
         // System.out.println(Arrays.toString(list));
 
     }

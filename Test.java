@@ -1,56 +1,54 @@
 import java.util.*;
 
 public class Test {
-    public static void main(String[] args) {
-        // System.out.println(31 & ((1 << 4) - 1));
-        // int[] arr = { 2, 4, 4, 4, 10, 9, 9 };
-        // int n = 7;
-        // int k = 3;
-        // for(int i = 0; i < arr.length; i++){
-        // System.out.print(Arrays.stream(arr).);
-        // }
-        // ArrayList<int[]> list = new ArrayList<int[]>();
-        // System.out.println("count: " + findCount(n, arr, k, list));
-        // int[] arr = { 1, 2, 3, 4, 5 };
-        // arr.String s = Arrays.toString(arr)
-        // .replace(",", "") // remove the commas
-        // .replace("[", "") // remove the right bracket
-        // .replace("]", ""); // remove the left bracket
+    // public static void main(String[] args) {
+    // // System.out.println(31 & ((1 << 4) - 1));
+    // // int[] arr = { 2, 4, 4, 4, 10, 9, 9 };
+    // // int n = 7;
+    // // int k = 3;
+    // // for(int i = 0; i < arr.length; i++){
+    // // System.out.print(Arrays.stream(arr).);
+    // // }
+    // // ArrayList<int[]> list = new ArrayList<int[]>();
+    // // System.out.println("count: " + findCount(n, arr, k, list));
+    // // int[] arr = { 1, 2, 3, 4, 5 };
+    // // arr.String s = Arrays.toString(arr)
+    // // .replace(",", "") // remove the commas
+    // // .replace("[", "") // remove the right bracket
+    // // .replace("]", ""); // remove the left bracket
 
-        // System.out.println(s.trim());
-        int[] arr1 = { 7, 7 };
-        int[] arr2 = { 1, 5, 9, 23, 12 };
-        maxSum();
+    // // System.out.println(s.trim());
+    // int[] arr1 = { 7, 7 };
+    // int[] arr2 = { 1, 5, 9, 23, 12 };
+    // maxSum();
 
-    }
+    // }
 
-    static void maxSum() {
-        // code here
-        Scanner data = new Scanner(System.in);
-        int t = data.nextInt();
-        for (int i = 0; i < t; i++) {
-            int len = data.nextInt();
-            int[] arr = new int[len];
-            for (int j = 0; j < len; j++) {
-                arr[j] = data.nextInt();
-            }
-            int[] sorted = arr.clone();
-            Arrays.sort(sorted);
-            int max = 0;
-            int nextMax = 0;
-            for (int j = 0; i < len; j++) {
-                if (arr[j] != sorted[j]) {
-                    if (arr[j] > max) {
-                        nextMax = max;
-                        max = arr[j];
-                    } else if (arr[j] > nextMax) {
-                        nextMax = arr[j];
-                    }
+    public static void main(String[] args) throws java.lang.Exception {
+        // your code goes here
+        Scanner input = new Scanner(System.in);
+        int tests = input.nextInt();
+        for (int i = 0; i < tests; i++) {
+            int n = input.nextInt();
+            int k = input.nextInt();
+            int count = 1;
+            int[] arr = new int[n];
+            arr[0] = input.nextInt();
+
+            for (int j = 1; j < n; j++) {
+                arr[j] = input.nextInt();
+                if (arr[j] % 2 != arr[j - 1] % 2) {
+                    count++;
                 }
             }
-            System.out.println(max + nextMax);
+            if (n == 1 && arr[0] == k) {
+                System.out.println(0);
+            } else {
+                System.out.println(count);
+            }
         }
-        data.close();
+
+        input.close();
 
     }
     // static int crazyIntegers(int n) {
