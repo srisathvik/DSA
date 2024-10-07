@@ -20,7 +20,7 @@ public class LL {
     }
 
     public void insertLast(int value) {
-        if (tail == null) {
+        if (tail == null || head == null) {
             insertFirst(value);
             return;
         }
@@ -28,6 +28,29 @@ public class LL {
         tail.next = node;
         tail = node;
         size++;
+    }
+
+    public void recursiveInsertion(int val, int index) {
+        // Node temp = head;
+        reccInsertion(val, index, head);
+    }
+
+    private Node reccInsertion(int value, int index, Node curr) {
+        // System.out.println(curr);
+        if (curr == null) {
+            System.out.println("curr : " + curr + "head: " + head);
+            return curr;
+        }
+        if (index == 0) {
+            // int temp = curr.value;
+            Node node = new Node(value, curr);
+            // curr.value = value;
+            // curr.next = node;
+            size++;
+            return node;
+        }
+        curr.next = reccInsertion(value, index - 1, curr.next);
+        return curr;
     }
 
     public void insertAtPosition(int value, int pos) {
@@ -56,6 +79,21 @@ public class LL {
         size++;
         return;
 
+    }
+
+    public Node reverseList() {
+        if (head.next == null) {
+            return head;
+        }
+        Node prev = head;
+        Node curr = head.next;
+        prev.next = null;
+        while (curr != null) {
+            curr.next = prev;
+            prev = curr;
+            curr = curr.next;
+        }
+        return prev;
     }
 
     public int deleteFirst() {

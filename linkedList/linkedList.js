@@ -73,6 +73,7 @@ class List{
         }
         
     }
+    
     //remove a given element
     removeAnElement(value){
        let curr = this.head;

@@ -26,31 +26,77 @@ public class Test {
 
     public static void main(String[] args) throws java.lang.Exception {
         // your code goes here
-        Scanner input = new Scanner(System.in);
-        int tests = input.nextInt();
-        for (int i = 0; i < tests; i++) {
-            int n = input.nextInt();
-            int k = input.nextInt();
-            int count = 1;
-            int[] arr = new int[n];
-            arr[0] = input.nextInt();
-
-            for (int j = 1; j < n; j++) {
-                arr[j] = input.nextInt();
-                if (arr[j] % 2 != arr[j - 1] % 2) {
-                    count++;
-                }
-            }
-            if (n == 1 && arr[0] == k) {
-                System.out.println(0);
-            } else {
-                System.out.println(count);
-            }
-        }
-
-        input.close();
+        int[] arr = { 42238051, -15436, -87468676, -358243, 933839885, 7137, 36478, 7729255, -11461608, -92473,
+                -9353854, -566, 29660, 24172957, -1366, -60325932, -648607, -8914706, -5429715, 62687521, -8517347, 99,
+                1569703, -352664787, -37842, -2421, 371780, -315002707, -718235, -575349, 16049, 319, 327283929,
+                446004097, -2757, 508603, -39543, -358984, -53730, -33, -3918818, -517969, 754, 8398, 7275,
+        };
+        System.out.println(maximumProduct(45, arr, 21, 24));
+        long a = -352664787;
+        long b = -315002707;
+        long temp = a * b;
+        System.out.println(temp);
 
     }
+
+    // public static ArrayList<Integer> boundarySum(int n, int[][] matrix) {
+    // // code here
+    // ArrayList<Integer> ans = new ArrayList<>();
+    // for(int i = 0; i < n; i++){
+    // for(int j = 0; j < n; j++){
+
+    // }
+    // }
+    // }
+
+    public static long maximumProduct(int n, int[] arr, int l, int r) {
+        // code here
+
+        long outerMax;
+        long outerMin;
+        long innerMax = arr[l - 1];
+        long innerMin = arr[l - 1];
+        if (l > 1) {
+            outerMax = arr[0];
+            outerMin = arr[0];
+        } else {
+            outerMax = arr[r];
+            outerMin = arr[r];
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (i >= l - 1 && i <= r - 1) {
+                if (arr[i] > innerMax) {
+                    innerMax = arr[i];
+                }
+                if (arr[i] < innerMin) {
+                    innerMin = arr[i];
+                }
+            } else {
+                if (arr[i] > outerMax) {
+                    outerMax = arr[i];
+                }
+                if (arr[i] < outerMin) {
+                    outerMin = arr[i];
+                }
+            }
+        }
+        System.out.println(outerMin + " " + outerMax + " " + innerMin + " " +
+                innerMax);
+        // if ((innerMax < 0 && innerMin < 0) || (outerMax < 0 && outerMin < 0)) {
+        // if (outerMin * innerMax > outerMax * innerMin) {
+        // return outerMin * innerMax;
+        // }
+        // return outerMax * innerMin;
+        // }
+
+        long[] ans = { outerMax * innerMax, outerMax * innerMin, innerMax * outerMin, innerMin * outerMin };
+        System.out.println(Arrays.toString(ans));
+        Arrays.sort(ans);
+        System.out.println(Arrays.toString(ans));
+        return ans[3];
+    }
+
     // static int crazyIntegers(int n) {
     // // Write your code here
     // int temp = n;
